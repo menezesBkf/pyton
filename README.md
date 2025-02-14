@@ -54,6 +54,10 @@ print(f"{a} elevado á {b} é: {p}")
 
 
 ctrl + alt + L = organizar codigos
+
+
+
+
 exercicio 4
 def val():
     op=int(input("insira a opção: "))
