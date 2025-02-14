@@ -1,4 +1,4 @@
-# pyton
+# python
 # Crie duas funções para somar dois valores e para subtrair dois valores
 # e retorne o resultado para o programa principal.
 
