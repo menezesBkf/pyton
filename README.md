@@ -40,17 +40,17 @@
 # sb = subt(n1,n2)
 # print(sb)
 
-#def potencial(a, b):
- #   if b == 0:
- #       return 1;
-#    else:
-#        return a * potencial(a, b - 1)
+def potencial(a, b):
+    if b == 0:
+        return 1;
+    else:
+        return a * potencial(a, b - 1)
 
 
-#a = int(input("insira a base: "))
-#b = int(input("insira o expoente: "))
-#p = potencial(a, b)
-#print(f"{a} elevado á {b} é: {p}")
+a = int(input("insira a base: "))
+b = int(input("insira o expoente: "))
+p = potencial(a, b)
+print(f"{a} elevado á {b} é: {p}")
 
 
 ctrl + alt + L = organizar codigos
