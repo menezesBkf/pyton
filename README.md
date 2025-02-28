@@ -90,3 +90,110 @@ else:
     print(f"multiplicação {m}")
 
 
+
+aula2
+
+import tkinter as tk
+root=tk.Tk()
+root.title("primeira janela")
+root.geometry("400x400")
+label1=tk.Label(root,text="Bem-vindo usuário")
+label1.pack(padx=20,pady=20)
+
+def ola():
+    label2=tk.Label(root,text="botão funcionando")
+    label2.pack(padx=25,pady=25)
+botao=tk.Button(root,text="ok",command=ola)
+botao.pack(padx=30,pady=30)
+t=tk.Entry(root)
+t.pack(padx=35, pady=35)
+
+def texto():
+    valor=t.get()
+    label1.config(text="Bem-vindo "+valor)
+botao2=tk.Button(root,text="atualizar", command=texto)
+botao2.pack(padx=20,pady=20)
+
+def janela():
+    frame1=tk.Toplevel(root)
+    frame1.title ("Nova janela do usuario")
+    frame1.geometry("300 x 300")
+    
+    label3=tk.Label(frame1,text="Janela do Usuário")
+    label3.pack(padx=20,pady=20)
+
+    def sair():
+        frame1.destroy()
+        frame1.destroy()
+        botao3=tk.Button(frame1,text="sair",command=sair)
+        botao3.pack(padx=20,pady=20)
+    frame1.pack()
+botao4=tk.Button(root,text="nova janela",command=janela)
+botao4.pack(padx=20,pady=20)
+root.mainloop()
+
+
+aula 3
+
+import tkinter as tk
+lista_nomes = []
+lista_idades = []
+lista_emails = []
+
+def ad():
+    valor1=entrada1.get()
+    lista_nomes.append(valor1)
+    valor2=entrada2.get()
+    lista_idades.append(valor2)
+    valor3=entrada3.get()
+    lista_emails.append(valor3)
+    alert=tk.Toplevel(root)
+    label9=tk.Label(alert,text="Convidado inserido na lista")
+    label9.pack()
+    
+    def ok():
+        alert.destroy()
+        b_ok=tk.Button(alert, text="OK", command=ok)
+        b_ok.pack()
+        entrada1. delete(0,"end")
+        entrada2. delete(0,"end")
+        entrada3. delete(0,"end")
+
+def exi():
+    label5=tk.Label(root,text="Lista de Convidados",font=("Arial",15))
+    label5.grid(row=5,column=1)
+    for i,item in enumerate(lista_nomes):
+        label6=tk.Label(root,text=item,font=("Arial",15))
+        label6.grid(row=i+6,column=0)
+    for i,item in enumerate(lista_idades):
+        label7=tk.Label(root,text=item)
+        label7.grid(row=i+6,column=1)
+    for i,item in enumerate(lista_emails):
+        label8=tk.Label(root,text=item, font=("Arial",15))
+        label8.grid(row=i+6,column=2)
+
+root= tk.Tk()
+root.title("Convite")
+root.geometry("600x350")
+label1=tk.Label(root, text="Convidados",font=("arial",15))
+label1.grid(row=0,column=0)
+label2=tk.Label(root,text="Nome:",font=("arial",15))
+label2.grid(row=1,column=0)
+entrada1=tk.Entry(root, font=("arial",15))
+entrada1.grid(row=1,column=1)
+label3=tk.Label(root, text="idade:",font=("arial",15))
+label3.grid(row=2,column=0)
+entrada2=tk.Entry(root, font=("arial",15))
+entrada2.grid(row=2,column=1)
+label4=tk.Label(root, text="email",font=("arial",15))
+label4.grid(row=3,column=0)
+entrada3=tk.Entry(root, font=("arial",15))
+entrada3.grid(row=3,column=1)
+b_ad=tk.Button(root, text="Adicionar",font=("arial",15),command=ad)
+b_ad.grid(row=4,column=0)
+b_exibir=tk.Button(root, text="Exibir",font=("Arial",15), command=exi)
+b_exibir.grid(row=4, column=1)
+
+root.mainloop()
+
+
